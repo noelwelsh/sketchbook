@@ -8,7 +8,7 @@ import doodle.interact.syntax.interpolation.*
 
 // Genuary 2022 prompt 1
 // "Draw 10,000 of something."
-object Spheres07012022 {
+object Spheres20220107 {
   val nLines = 100
   val nSpheresPerLine = 100
   val radius = 512
@@ -66,7 +66,7 @@ object Spheres07012022 {
 
   val sphere = lines
 
-  @main def spheres070122(): Unit = {
+  @main def spheres20220107Main(): Unit = {
     import doodle.effect.Writer.*
 
     val picture = sphere.run
@@ -74,6 +74,6 @@ object Spheres07012022 {
       .size(radius * 2 + 40, radius * 2 + 40)
       .background(Color.hsl(240.degrees, 0.0, 0.0))
     picture.drawWithFrame(frame)
-    picture.write[Png]("sphere07012022.png", frame)
+    picture.write[Png]("20220107-spheres.png", frame)
   }
 }
