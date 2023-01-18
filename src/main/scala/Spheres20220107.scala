@@ -70,8 +70,7 @@ object Spheres20220107 {
     import doodle.core.format.*
 
     val picture = sphere.run
-    val frame = Frame
-      .default
+    val frame = Frame.default
       .withSize(radius * 2 + 40, radius * 2 + 40)
       .withBackground(Color.hsl(240.degrees, 0.0, 0.0))
     picture.drawWithFrame(frame)
