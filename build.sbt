@@ -1,3 +1,3 @@
-scalaVersion := "3.1.0"
+scalaVersion := "3.3.1"
 
-libraryDependencies += "org.creativescala" %% "doodle" % "0.10.1"
+libraryDependencies += "org.creativescala" %% "doodle" % "0.20.0"

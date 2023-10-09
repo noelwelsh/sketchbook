@@ -37,7 +37,7 @@ object SingleCurve20220108 {
       .map(_.allOn.strokeWidth(width))
 
   @main def singleCurve20220108Main(): Unit = {
-    import doodle.effect.Writer.*
+    import doodle.core.format.*
 
     val picture = curve.run
     picture.draw()

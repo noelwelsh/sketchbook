@@ -67,12 +67,13 @@ object Spheres20220107 {
   val sphere = lines
 
   @main def spheres20220107Main(): Unit = {
-    import doodle.effect.Writer.*
+    import doodle.core.format.*
 
     val picture = sphere.run
     val frame = Frame
-      .size(radius * 2 + 40, radius * 2 + 40)
-      .background(Color.hsl(240.degrees, 0.0, 0.0))
+      .default
+      .withSize(radius * 2 + 40, radius * 2 + 40)
+      .withBackground(Color.hsl(240.degrees, 0.0, 0.0))
     picture.drawWithFrame(frame)
     picture.write[Png]("20220107-spheres.png", frame)
   }
