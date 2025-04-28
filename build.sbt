@@ -1,3 +1,5 @@
-scalaVersion := "3.3.1"
+scalaVersion := "3.3.4"
 
-libraryDependencies += "org.creativescala" %% "doodle" % "0.20.0"
+Global / semanticdbEnabled := true
+
+libraryDependencies += "org.creativescala" %% "doodle" % "0.29.0"

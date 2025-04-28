@@ -14,7 +14,7 @@ object Spheres20220107 {
   val radius = 512
   val circleMean = 7.0
   val circleStdDev = 3.5
-  val baseColor = Color.hsla(0.degrees, 1.0, 0.7, 0.8)
+  val baseColor = Color.hsl(0.degrees, 1.0, 0.7, 0.8)
   val colorStdDev = 0.1
 
   val randomCircle: Random[Picture[Unit]] =
@@ -23,14 +23,14 @@ object Spheres20220107 {
   def randomColor(x: Normalized): Random[Color] = {
     for {
       s <- Random.normal(
-        (baseColor.saturation - x).max(0.1),
+        (baseColor.saturation - x.get).max(0.1),
         colorStdDev
       )
       l <- Random.normal(
         (baseColor.lightness - x).max(0.1),
         colorStdDev
       )
-    } yield baseColor.saturate(s.normalized).lightness(l.normalized)
+    } yield baseColor.saturate(s).lightness(l.normalized)
   }
 
   def lineWidth(angle: Angle): Double = Math.abs(angle.cos * radius)
